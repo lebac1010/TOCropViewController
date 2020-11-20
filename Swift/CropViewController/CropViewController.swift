@@ -403,7 +403,7 @@ open class CropViewController: UIViewController, TOCropViewControllerDelegate {
      This class internally manages and abstracts access to a `TOCropViewController` instance
      :nodoc:
      */
-    internal let toCropViewController: TOCropViewController!
+    public let toCropViewController: TOCropViewController!
     
     /**
      Forward status bar status style changes to the crop view controller
