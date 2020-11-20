@@ -683,7 +683,6 @@
     CGSize aspectRatio = CGSizeZero;
     
     _aspectRatioPreset = aspectRatioPreset;
-    
     switch (aspectRatioPreset) {
         case TOCropViewControllerAspectRatioPresetOriginal:
             aspectRatio = CGSizeZero;
@@ -691,23 +690,29 @@
         case TOCropViewControllerAspectRatioPresetSquare:
             aspectRatio = CGSizeMake(1.0f, 1.0f);
             break;
-        case TOCropViewControllerAspectRatioPreset3x2:
-            aspectRatio = CGSizeMake(3.0f, 2.0f);
-            break;
-        case TOCropViewControllerAspectRatioPreset5x3:
-            aspectRatio = CGSizeMake(5.0f, 3.0f);
+        case TOCropViewControllerAspectRatioPreset5x4:
+            aspectRatio = CGSizeMake(5.0f, 4.0f);
             break;
         case TOCropViewControllerAspectRatioPreset4x3:
             aspectRatio = CGSizeMake(4.0f, 3.0f);
             break;
-        case TOCropViewControllerAspectRatioPreset5x4:
-            aspectRatio = CGSizeMake(5.0f, 4.0f);
-            break;
-        case TOCropViewControllerAspectRatioPreset7x5:
-            aspectRatio = CGSizeMake(7.0f, 5.0f);
+        case TOCropViewControllerAspectRatioPreset3x2:
+            aspectRatio = CGSizeMake(3.0f, 2.0f);
             break;
         case TOCropViewControllerAspectRatioPreset16x9:
             aspectRatio = CGSizeMake(16.0f, 9.0f);
+            break;
+        case TOCropViewControllerAspectRatioPreset9x16:
+            aspectRatio = CGSizeMake(9.0f, 16.0f);
+            break;
+        case TOCropViewControllerAspectRatioPreset2x3:
+            aspectRatio = CGSizeMake(2.0f, 3.0f);
+            break;
+        case TOCropViewControllerAspectRatioPreset3x4:
+            aspectRatio = CGSizeMake(3.0f, 4.0f);
+            break;
+        case TOCropViewControllerAspectRatioPreset4x5:
+            aspectRatio = CGSizeMake(4.0f, 5.0f);
             break;
         case TOCropViewControllerAspectRatioPresetCustom:
             aspectRatio = self.customAspectRatio;
