@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ih7-pX-ukN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gI4-tu-DeY">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,11 +42,11 @@
                                     <constraint firstAttribute="height" constant="39" id="DQN-qc-sMs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <color key="textColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="placeholderTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KI9-sn-DTE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iBG-dT-C7U"/>
                             <constraint firstItem="KI9-sn-DTE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vMe-7o-1ub"/>
@@ -55,7 +56,110 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271.19999999999999" y="-413.3433283358321"/>
+            <point key="canvasLocation" x="-537" y="-421"/>
+        </scene>
+        <!--Example View Controller-->
+        <scene sceneID="zZu-oV-8Iu">
+            <objects>
+                <viewController storyboardIdentifier="ExampleViewController" id="gI4-tu-DeY" customClass="ExampleViewController" customModule="CropViewControllerExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sbF-be-SZZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="MCI-mZ-NQT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jf2-6X-CSY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-S8-wz8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="oR5-cd-8H5"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="A9x-AG-iGZ">
+                                <rect key="frame" x="0.0" y="608" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLa-xP-S4e">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="80"/>
+                                        <state key="normal" title="1:1"/>
+                                        <connections>
+                                            <action selector="ratioAction:" destination="gI4-tu-DeY" eventType="touchUpInside" id="xPV-nb-aRx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lV-4W-zR9">
+                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="80"/>
+                                        <state key="normal" title="2:3"/>
+                                        <connections>
+                                            <action selector="ratioAction:" destination="gI4-tu-DeY" eventType="touchUpInside" id="GCf-bZ-0Om"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0an-mw-J8a">
+                                        <rect key="frame" x="107" y="0.0" width="53.5" height="80"/>
+                                        <state key="normal" title="3:5"/>
+                                        <connections>
+                                            <action selector="ratioAction:" destination="gI4-tu-DeY" eventType="touchUpInside" id="3A8-d4-QZf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1A-wn-uNY">
+                                        <rect key="frame" x="160.5" y="0.0" width="54" height="80"/>
+                                        <state key="normal" title="3:4"/>
+                                        <connections>
+                                            <action selector="ratioAction:" destination="gI4-tu-DeY" eventType="touchUpInside" id="wAN-t7-ynI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0o-HE-eqg">
+                                        <rect key="frame" x="214.5" y="0.0" width="53.5" height="80"/>
+                                        <state key="normal" title="4:5"/>
+                                        <connections>
+                                            <action selector="ratioAction:" destination="gI4-tu-DeY" eventType="touchUpInside" id="YiB-8f-GQt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUM-e2-Zkw">
+                                        <rect key="frame" x="268" y="0.0" width="53.5" height="80"/>
+                                        <state key="normal" title="5:7"/>
+                                        <connections>
+                                            <action selector="ratioAction:" destination="gI4-tu-DeY" eventType="touchUpInside" id="Nr3-Z5-Sxa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uv-jT-ip8">
+                                        <rect key="frame" x="321.5" y="0.0" width="53.5" height="80"/>
+                                        <state key="normal" title="9:16"/>
+                                        <connections>
+                                            <action selector="ratioAction:" destination="gI4-tu-DeY" eventType="touchUpInside" id="pPp-Pz-vDg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5FL-8T-AJL"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mwr-S8-wz8" firstAttribute="leading" secondItem="Jf2-6X-CSY" secondAttribute="leading" id="EuY-1R-SDE"/>
+                            <constraint firstAttribute="trailing" secondItem="A9x-AG-iGZ" secondAttribute="trailing" id="ZX4-65-aco"/>
+                            <constraint firstItem="A9x-AG-iGZ" firstAttribute="leading" secondItem="Jf2-6X-CSY" secondAttribute="leading" id="jt6-pe-C3T"/>
+                            <constraint firstAttribute="trailing" secondItem="Mwr-S8-wz8" secondAttribute="trailing" id="lIr-aX-kti"/>
+                            <constraint firstItem="A9x-AG-iGZ" firstAttribute="top" secondItem="Mwr-S8-wz8" secondAttribute="bottom" constant="8" symbolic="YES" id="uqQ-0a-KGc"/>
+                            <constraint firstItem="Mwr-S8-wz8" firstAttribute="top" secondItem="sbF-be-SZZ" secondAttribute="bottom" id="zvS-oW-FAO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerCropView" destination="Mwr-S8-wz8" id="CuD-3c-O9j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Gw-F1-1Qd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2250.4000000000001" y="-413.3433283358321"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

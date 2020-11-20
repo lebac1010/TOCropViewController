@@ -106,6 +106,8 @@
  before the view controller ends.
  */
 @property (nonatomic, assign) BOOL showActivitySheetOnDone;
+@property (nonatomic, assign) CGFloat kTOCropViewControllerTitleTopPadding;
+@property (nonatomic, assign) CGFloat kTOCropViewControllerToolbarHeight;
 
 /**
  The crop view managed by this view controller.
@@ -355,6 +357,7 @@
  Resets object of TOCropViewController class as if user pressed reset button in the bottom bar themself
  */
 - (void)resetCropViewLayout;
+- (void)showAspectRatioDialogCustom: (NSInteger)i;
 
 /** 
  Set the aspect ratio to be one of the available preset options. These presets have specific behaviour

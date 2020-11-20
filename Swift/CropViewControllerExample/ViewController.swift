@@ -22,8 +22,8 @@ class ViewController: UIViewController, CropViewControllerDelegate, UIImagePicke
         guard let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) else { return }
         
         let cropController = CropViewController(croppingStyle: croppingStyle, image: image)
-        //cropController.modalPresentationStyle = .fullScreen
         cropController.delegate = self
+        cropController.toCropViewController.kTOCropViewControllerToolbarHeight = 44.0
         
         // Uncomment this if you wish to provide extra instructions via a title label
         //cropController.title = "Crop Image"
